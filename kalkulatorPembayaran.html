@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pembayaran</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .container {
+            margin-top: 100px;
+        }
+        input[type="number"] {
+            padding: 8px;
+            width: 100px;
+        }
+        input[type="submit"] {
+            padding: 8px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Kalkulator Pembayaran</h2>
+        <form id="pembayaranForm">
+            <label for="harga">Harga Barang:</label><br>
+            <input type="number" id="harga" name="harga" min="0" required><br><br>
+            <label for="jumlah">Jumlah Barang:</label><br>
+            <input type="number" id="jumlah" name="jumlah" min="0" required><br><br>
+            <input type="submit" value="Hitung">
+        </form>
+        <p id="hasil"></p>
+    </div>
+
+    <script>
+        document.getElementById("pembayaranForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            var harga = parseInt(document.getElementById("harga").value);
+            var jumlah = parseInt(document.getElementById("jumlah").value);
+            var totalBayar = hitungTotal(harga, jumlah);
+            document.getElementById("hasil").innerHTML = "Total Bayar: Rp " + totalBayar;
+        });
+
+        function hitungTotal(harga, jumlah) {
+            var diskon = 0;
+            if (jumlah >= 3) {
+                diskon = 0.1 * harga * jumlah;
+            }
+            var totalBayar = harga * jumlah - diskon;
+            return totalBayar;
+        }
+    </script>
+</body>
+</html>
