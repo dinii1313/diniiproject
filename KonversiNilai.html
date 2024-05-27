@@ -3,28 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Konversi nilai</title>
-    <style>
-        body{
-            font-family: Arial, sans-serif;;
-            text-align: center;
-        }
-        .container {
-            margin-top: 100px;
-        }
-        input [type="number"] {
-            padding: 8px;
-            width: 100px;
-        }
-        input[type="submit"] {
-            padding: 8px 20px;
-            background-color: #4CAF50;
-            color:black;
-            border:none;
-            cursor: pointer;
-        }
-    </style>
-
+    <title>Konversi Nilai</title>
+<style>
+    body{
+        font-family: Arial, sans-serif;;
+        text-align: center;
+    }
+    .container {
+        margin-top: 100px;
+    }
+    input [type="number"] {
+        padding: 8px;
+        width: 100px;
+    }
+    input[type="submit"] {
+        padding: 8px 20px;
+        background-color: #4CAF50;
+        color:white;
+        border:none;
+        cursor: pointer;
+    }
+</style>
+<body>
 </head>
 <body>
     <h2>Program Konversi Nilai</h2>
@@ -35,7 +35,6 @@
         <label for="hasil">Hasil konversi:</label><br>
         <input type="text" id="hasil" readonly><br><br>
     </form>
-
     <script>
         function konversiNilai() {
             var nilai = parseInt(document.getElementById("nilai").value);
@@ -54,7 +53,6 @@
             } else {
                 hasil = "Nilai tidak valid";
             }
-
             document.getElementById("hasil").value = hasil;
         }
     </script>
