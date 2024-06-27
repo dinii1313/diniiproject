@@ -1,7 +1,8 @@
 <?php
-echo("Menghitung Gaji Total<br>");
-$gapok=2000000;
-$tunjangan=500000;
-$total=$gapok+$tunjangan;
-echo("Total Gaji=$total");
+$x=10;
+while($x<=100)
+{
+    echo($x."<br>");
+    $x+=10;
+}
 ?>

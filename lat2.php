@@ -1,7 +1,10 @@
 <?php
-echo("Menghitung Gaji Total<br>");
-$gapok=2000000;
-$tunjangan=500000;
-$total=$gapok+$tunjangan;
-echo("Total Gaji=$total");
+$x=100;
+$y=150;
+if($x>$y)
+echo("X > Y");
+elseif($y>$x)
+echo("Y > X");
+else
+echo("X = Y");
 ?>
